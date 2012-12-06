@@ -34,7 +34,7 @@
 			Get My Christmas List
 		</h1>
 		<h4>
-			Made my list! Checking it twice!
+			Making my list! Checking it twice!
 		</h4>
 	
 		<div class="centered_div">
@@ -50,13 +50,16 @@
 		<table class="table table-bordered" id="Domains_table">
 		      <thead> 
 		         <tr>
-		          	<th>Domain</th>
-		          	<th>State</th>
+		          	<th><h3>Item</h3></th>
 		       	 </tr>
 		      </thead>
 		      
 		      <tbody id="result">
-
+		      	<% @items.each do |item| %>
+		      	
+		      	<tr><th><%= item %></th></tr> 
+		      
+		      	<% end %>
 		      </tbody>
 
 		 </table>
