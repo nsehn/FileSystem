@@ -1,0 +1,68 @@
+<html>
+
+	<head>
+		<title>Get List Items
+		</title>
+		
+	</head>
+	<script src="/js/jquery-1.8.2.min.js"></script>
+	<link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">		
+	<script src="/js/bootstrap.min.js"></script>
+	
+	<style>
+
+	div {
+		padding: 20px;
+	}
+
+	h1, h4 {
+		text-align: center;
+	}
+	
+	.centered_div{
+	  width: 280px;
+ 	 margin-left: auto;
+ 	 margin-right:  auto;
+	}
+
+
+	</style>
+
+	<body>
+
+		<h1>
+			Get My Christmas List
+		</h1>
+		<h4>
+			Made my list! Checking it twice!
+		</h4>
+	
+		<div class="centered_div">
+			<form method="post" action="/list"> <!--this line of html code is adding /whois to the server it is on and POSTing there-->
+  				<input type="text" name="listitem" id="mytextbox" value="" /><br>
+  				<!-- the data's name is domain which is what we are POSTing to /whois -->
+				<input type="submit" class="btn btn-info" id="addButton" value="Add" /> 
+			</form>
+			<!-- class "btn btn-info" is from bootstrap css -->
+			
+		</div>
+	
+		<table class="table table-bordered" id="Domains_table">
+		      <thead> 
+		         <tr>
+		          	<th>Domain</th>
+		          	<th>State</th>
+		       	 </tr>
+		      </thead>
+		      
+		      <tbody id="result">
+
+		      </tbody>
+
+		 </table>
+
+	</body>
+
+</html>
+
+<!-- The Javascript is client code and is the front end. The Ruby hi.rb is the back end, it's the server code. The client has no idea what this is Ruby code. All the client knows that the client sent and received JSON from the server. -->
